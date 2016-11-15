@@ -76,7 +76,7 @@
 
 
 	<build>
-		<finalName>Appjsf</finalName>
+		<finalName>trab4bim128763</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
