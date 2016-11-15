@@ -10,9 +10,9 @@ import javax.inject.Named;
 import org.apache.commons.lang3.StringUtils;
 
 import br.com.ronaldozuchi.model.UsuarioModel;
+import br.com.ronaldozuchi.repository.UsuarioRepository;
 import br.com.ronaldozuchi.repository.entity.UsuarioEntity;
 import br.com.ronaldozuchi.uteis.Uteis;
-import br.ronaldozuchi.repository.UsuarioRepository;
 
 /**
  * Classe gerenciada pelo Bean CDI com espopo de sessão.
@@ -78,11 +78,11 @@ public class UsuarioController implements Serializable {
 		 * Verificações para possíveis erros na hora do preenchimento dos dados de login.
 		 */
 		if (StringUtils.isEmpty(usuarioModel.getUsuario()) || StringUtils.isBlank(usuarioModel.getUsuario())) {
-			Uteis.mensagem("Favor informar o login!");
+			Uteis.Mensagem("Favor informar o login!");
 			return null;
 		} else {
 			if (StringUtils.isEmpty(usuarioModel.getSenha()) || StringUtils.isBlank(usuarioModel.getSenha())) {
-				Uteis.mensagem("Favor informara senha!");
+				Uteis.Mensagem("Favor informara senha!");
 				return null;
 			} else {
 				usuarioEntity = usuarioRepository.ValidaUsuario(usuarioModel);
@@ -95,7 +95,7 @@ public class UsuarioController implements Serializable {
 
 					return "sistema/home?faces-redirect=true";
 				} else {
-					Uteis.mensagem("Não foi possível efetuar o login com esse usuário e senha!");
+					Uteis.Mensagem("Não foi possível efetuar o login com esse usuário e senha!");
 					return null;
 				}
 

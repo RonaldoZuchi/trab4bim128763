@@ -27,7 +27,7 @@ public class Uteis {
 	 * Método para mostrar a mensagem.
 	 * @param mensagem
 	 */
-	public static void mensagem (String mensagem){
+	public static void Mensagem (String mensagem){
 		FacesContext facesContext = FacesContext.getCurrentInstance();
 		facesContext.addMessage(null, new FacesMessage("Alerta",mensagem));
 
@@ -36,7 +36,7 @@ public class Uteis {
 	 * Metodo para mostrar a mensagem
 	 * @param mensagem
 	 */
-	public static void mensagemAtencao(String mensagem){
+	public static void MensagemAtencao(String mensagem){
 		FacesContext facesContext = FacesContext.getCurrentInstance();
 		facesContext.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Atenção:", mensagem));
 	}
@@ -44,7 +44,7 @@ public class Uteis {
 	 * Metodo para mostrar a mensagem
 	 * @param mensagem
 	 */
-	public static void mensagemInfo(String mensagem){
+	public static void MensagemInfo(String mensagem){
 		FacesContext facesContext = FacesContext.getCurrentInstance();
 		facesContext.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "", mensagem));
 	}

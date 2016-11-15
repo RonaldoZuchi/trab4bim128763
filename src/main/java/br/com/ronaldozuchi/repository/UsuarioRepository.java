@@ -1,4 +1,4 @@
-package br.ronaldozuchi.repository;
+package br.com.ronaldozuchi.repository;
 
 import java.io.Serializable;
 
