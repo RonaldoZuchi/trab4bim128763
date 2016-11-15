@@ -66,8 +66,24 @@
 					<p:messages autoUpdate="true" closable="true" severity="error" />
 					<p:messages showDetail="true" autoUpdate="true" closable="true"
 						severity="info" />
- 
 
+				</h:form>
+
+			</p:tab>
+
+			<p:tab title="Upload Xml Pessoa">
+
+				<h:form id="form-upload" enctype="multipart/form-data">
+
+					<h:panelGrid id="panelGrid-upload-xml" columns="2" cellpadding="10">
+
+						<p:fileUpload value="#{cadastrarPessoaController.file}"
+							mode="simple" skinSimple="true" label="Selecionar" />
+
+						<p:commandButton value="Importar..." ajax="false"
+							actionListener="#{cadastrarPessoaController.UploadRegistros}" />
+
+					</h:panelGrid>
 
 				</h:form>
 
