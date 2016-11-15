@@ -134,4 +134,15 @@ public class PessoaRepository {
 
 	}
 
+	/**
+	 * Método para excluir um objeto pelo código
+	 *
+	 * @param codigo
+	 */
+	public void ExcluirRegistro(int codigo) {
+		entityManager = Uteis.JpaEntityManager();
+		PessoaEntity pessoaEntity = this.GetPessoa(codigo);
+		entityManager.remove(pessoaEntity);
+	}
+
 }

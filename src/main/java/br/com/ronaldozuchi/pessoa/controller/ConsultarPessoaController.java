@@ -81,4 +81,14 @@ public class ConsultarPessoaController implements Serializable {
 		this.init();
 	}
 
+	/**
+	 * Método que remove o registo do banco e atualiza a tabela.
+	 *
+	 * @param pessoaModel
+	 */
+	public void ExcluirPessoa(PessoaModel pessoaModel) {
+		this.pessoaRepository.ExcluirRegistro(pessoaModel.getCodigo());
+		this.pessoas.remove(pessoaModel);
+	}
+
 }
